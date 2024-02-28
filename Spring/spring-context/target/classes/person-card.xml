@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+            
+<!-- Constructer Injection by nested Bean-->
+     <!--       <bean id ="person" class="org.jsp.spring.Person1">
+				<constructor-arg name="card">
+					<bean class="org.jsp.spring.PanCard">
+						<property name="number" value="adsfg789k"></property>
+						<property name="pincode" value="4789658"></property>
+					</bean>
+				</constructor-arg>
+			</bean>      -->
+			
+<!-- Constructer Injection by Ref Attribute-->
+	<bean id ="person" class="org.jsp.spring.Person1">
+				<constructor-arg name="card" ref="card"></constructor-arg>
+	</bean>
+	<bean id="card" class="org.jsp.spring.PanCard">
+		<property name="number" value="adsfg789k"></property>
+		<property name="pincode" value="4789658"></property>
+	</bean>		            
+
+</beans>

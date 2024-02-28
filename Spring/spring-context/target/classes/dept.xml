@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+            
+            <bean id="dept" class="org.jsp.Collection_injection.Department">
+				<property name="names">
+					<list>
+						<value>Dhoni</value>
+						<value>Virat</value>
+						<value>KL Rahul</value>
+					</list>
+				</property>
+				<property name="ids">
+					<set>
+					<value>11</value>
+					<value>21</value>
+					<value>31</value>
+					</set>
+				</property>
+				<property name="details">
+					<map>
+						<entry key="11" value="Dhoni"></entry>
+						<entry key="21" value="Rohit"></entry>
+						<entry key="31" value="KL Rahul"></entry>
+					</map>
+				</property>
+			</bean>
+            
+</beans>
